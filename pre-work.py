@@ -8,7 +8,7 @@ def hello_name(user_name):
 def first_odds():
     for numbers in range(1,100):
         if numbers % 2 >=1:
-            return(numbers)
+            print(numbers)
 
 #Question 3
 #Please write a Python function, max_num_in_list to return the max number of a given list.
@@ -21,11 +21,9 @@ def max_num_in_list(a_list):
 #Write a function to return if the given year is a leap year. A leap year is divisible by 4, but not divisible by 100, unless it is also divisible by 400. The return should be boolean Type (true/false).
 def is_leap_year(a_year):
     a_year = int(a_year)
-    if (a_year % 400 == 0):
+    if (a_year % 4 == 0) and (a_year % 100 != 0):
         return True
-    elif (a_year % 100 == 0):
-        return True
-    elif (a_year % 4 == 0):
+    elif (a_year % 100 == 0) and (a_year % 400 == 0):
         return True
     else:
         return False
